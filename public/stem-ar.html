@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +7,13 @@
 <meta name="description" content="An immersive Augmented Reality learning platform for Grades 6–9 covering Physics, Mathematics, ICT and Astronomy." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============ RESET / BASE ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{
-  font-family:'Inter',system-ui,sans-serif;
+  font-family:'Noto Sans Sinhala', 'Inter', system-ui, sans-serif;
   background:#0a0e1a;
   color:#e8ecf5;
   min-height:100vh;
@@ -778,6 +778,27 @@ footer{
   .cta-row{flex-direction:column;width:100%}
   .cta-row .btn{width:100%;justify-content:center}
 }
+
+/* ============ APP SCREENSHOT SLIDESHOW ============ */
+.ss-slideshow{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--glass-bg);border:1px solid var(--glass-border);padding:20px;margin:24px auto 0;max-width:720px}
+.ss-slideshow h3{margin-bottom:6px}
+.ss-slideshow .ss-desc{color:var(--muted);margin-bottom:16px;font-size:.9rem}
+.ss-viewport{position:relative;width:100%;max-height:420px;background:#070a12;border-radius:var(--radius);overflow:hidden;border:1px solid var(--glass-border)}
+.ss-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);height:100%;will-change:transform}
+.ss-slide{flex:0 0 calc(100% / 3);height:100%;display:flex;align-items:center;justify-content:center;position:relative;padding:0 8px;box-sizing:border-box}
+.ss-slide img{width:100%;height:100%;object-fit:contain;display:block;border-radius:16px;box-shadow:0 0 24px rgba(124,58,237,.2),0 4px 12px rgba(0,0,0,.4);border:1px solid rgba(124,58,237,.15);transition:transform .3s}
+.ss-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f1322,#1a1f35);color:var(--muted);font-size:1rem;flex-direction:column;gap:8px;border-radius:16px;box-shadow:0 0 24px rgba(124,58,237,.2),0 4px 12px rgba(0,0,0,.4);border:1px solid rgba(124,58,237,.15)}
+.ss-placeholder .ph-icon{font-size:2.4rem;opacity:.5}
+.ss-nav{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(10,14,26,.7);border:1px solid var(--glass-border);color:#e8ecf5;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;z-index:10;font-size:.8rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ss-nav:hover{background:rgba(124,58,237,.25);border-color:rgba(124,58,237,.5);box-shadow:0 0 20px rgba(124,58,237,.4)}
+.ss-prev{left:8px}
+.ss-next{right:8px}
+.ss-dots{display:flex;justify-content:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.ss-dot{width:8px;height:8px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;cursor:pointer;transition:all .25s}
+.ss-dot.active{background:#7c3aed;border-color:#7c3aed;box-shadow:0 0 8px rgba(124,58,237,.6)}
+.ss-dot:hover{border-color:rgba(124,58,237,.5)}
+.ss-caption{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(transparent,rgba(10,14,26,.9));color:#e8ecf5;font-size:.82rem;opacity:0;transform:translateY(8px);transition:all .3s}
+.ss-slide.active .ss-caption{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -908,6 +929,52 @@ footer{
       </div>
     </div>
 
+    <div class="glass ss-slideshow reveal" style="margin-top:48px" id="physicsSlideshow">
+      <h3>Application Highlights</h3>
+      <p class="ss-desc">Explore the Physics AR module in action — from scanning markers to interacting with 3D simulations.</p>
+      <div class="ss-viewport">
+        <div class="ss-track" id="physicsSsTrack">
+          <div class="ss-slide active">
+            <img src="Images/Genuka - Physics/1.jpg" alt="Physics Screenshot 1" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/2.jpg" alt="Physics Screenshot 2" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/3.jpg" alt="Physics Screenshot 3" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/7.jpg" alt="Physics Screenshot 4" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/5.jpg" alt="Physics Screenshot 5" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/6.jpg" alt="Physics Screenshot 6" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Genuka - Physics/4.jpg" alt="Physics Screenshot 7" />
+            
+          </div>
+        </div>
+        <button class="ss-nav ss-prev" onclick="ssGo('physicsSsTrack',-1)">&#10094;</button>
+        <button class="ss-nav ss-next" onclick="ssGo('physicsSsTrack',1)">&#10095;</button>
+      </div>
+      <div class="ss-dots" id="physicsSsDots">
+        <button class="ss-dot active" onclick="ssJump('physicsSsTrack',0)"></button>
+        <button class="ss-dot" onclick="ssJump('physicsSsTrack',1)"></button>
+        <button class="ss-dot" onclick="ssJump('physicsSsTrack',2)"></button>
+        <button class="ss-dot" onclick="ssJump('physicsSsTrack',3)"></button>
+        <button class="ss-dot" onclick="ssJump('physicsSsTrack',4)"></button>
+      </div>
+    </div>
+
     <div class="section-head reveal" style="margin-top:60px"><div class="kicker">Academic</div><h2>Research Foundation</h2></div>
     <div class="accordion" data-acc>
       <div class="acc-item"><button class="acc-head">Literature Survey<span class="chev">▾</span></button><div class="acc-body">A review of existing studies on Augmented Reality in education, focusing on how AR improves student engagement, understanding, and interactive learning in STEM subjects.</div></div>
@@ -950,6 +1017,87 @@ footer{
             <div>x = -3 → y <b><span id="yAtN3">-3</span></b></div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="glass ss-slideshow reveal" style="margin-top:48px" id="mathematicsSlideshow">
+      <h3>Application Highlights</h3>
+      <p class="ss-desc">Explore the Mathematics AR module in action — from scanning markers to interacting with 3D simulations.</p>
+      <div class="ss-viewport">
+        <div class="ss-track" id="mathematicsSsTrack">
+          <div class="ss-slide active">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230606.png" alt="Mathematics Screenshot 1" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230620.png" alt="Mathematics Screenshot 2" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230658.png" alt="Mathematics Screenshot 3" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230713.png" alt="Mathematics Screenshot 4" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230730.png" alt="Mathematics Screenshot 5" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230743.png" alt="Mathematics Screenshot 6" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230753.png" alt="Mathematics Screenshot 7" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230808.png" alt="Mathematics Screenshot 8" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230824.png" alt="Mathematics Screenshot 9" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230836.png" alt="Mathematics Screenshot 10" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230846.png" alt="Mathematics Screenshot 11" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/Screenshot 2026-05-01 230913.png" alt="Mathematics Screenshot 12" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/WhatsApp Image 2026-04-28 at 12.05@3x.png" alt="Mathematics Screenshot 13" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Hasith - Maths/WhatsApp Image 2026-05-01 at 11.12.23 PM.jpeg" alt="Mathematics Screenshot 14" />
+            
+          </div>
+        </div>
+        <button class="ss-nav ss-prev" onclick="ssGo('mathematicsSsTrack',-1)">&#10094;</button>
+        <button class="ss-nav ss-next" onclick="ssGo('mathematicsSsTrack',1)">&#10095;</button>
+      </div>
+      <div class="ss-dots" id="mathematicsSsDots">
+        <button class="ss-dot active" onclick="ssJump('mathematicsSsTrack',0)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',1)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',2)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',3)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',4)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',5)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',6)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',7)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',8)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',9)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',10)"></button>
+        <button class="ss-dot" onclick="ssJump('mathematicsSsTrack',11)"></button>
       </div>
     </div>
 
@@ -1007,6 +1155,77 @@ footer{
       </div>
     </div>
 
+    <div class="glass ss-slideshow reveal" style="margin-top:48px" id="ictSlideshow">
+      <h3>Application Highlights</h3>
+      <p class="ss-desc">Explore the ICT AR module in action — from scanning markers to interacting with 3D simulations.</p>
+      <div class="ss-viewport">
+        <div class="ss-track" id="ictSsTrack">
+          <div class="ss-slide active">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.11.jpeg" alt="ICT Screenshot 1" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.12.jpeg" alt="ICT Screenshot 2" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.12 (1).jpeg" alt="ICT Screenshot 3" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.12 (2).jpeg" alt="ICT Screenshot 4" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.13.jpeg" alt="ICT Screenshot 5" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.13 (1).jpeg" alt="ICT Screenshot 6" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.13 (2).jpeg" alt="ICT Screenshot 7" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.14.jpeg" alt="ICT Screenshot 8" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.14 (1).jpeg" alt="ICT Screenshot 9" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.14 (2).jpeg" alt="ICT Screenshot 10" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.15.jpeg" alt="ICT Screenshot 11" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Iruni - ICT/WhatsApp Image 2026-05-08 at 18.06.15 (1).jpeg" alt="ICT Screenshot 12" />
+            
+          </div>
+        </div>
+        <button class="ss-nav ss-prev" onclick="ssGo('ictSsTrack',-1)">&#10094;</button>
+        <button class="ss-nav ss-next" onclick="ssGo('ictSsTrack',1)">&#10095;</button>
+      </div>
+      <div class="ss-dots" id="ictSsDots">
+        <button class="ss-dot active" onclick="ssJump('ictSsTrack',0)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',1)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',2)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',3)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',4)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',5)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',6)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',7)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',8)"></button>
+        <button class="ss-dot" onclick="ssJump('ictSsTrack',9)"></button>
+      </div>
+    </div>
+
     <div class="section-head reveal" style="margin-top:60px"><div class="kicker">Academic</div><h2>Research Foundation</h2></div>
     <div class="accordion" data-acc>
       <div class="acc-item"><button class="acc-head">Literature Survey<span class="chev">▾</span></button><div class="acc-body">A review of existing studies on immersive technologies in education, focusing on how AR enhances student understanding and interactivity in Grade 10 ICT, while identifying the need for localized applications in resource-constrained environments.</div></div>
@@ -1050,6 +1269,63 @@ footer{
             <div class="sun"></div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="glass ss-slideshow reveal" style="margin-top:48px" id="astronomySlideshow">
+      <h3>Application Highlights</h3>
+      <p class="ss-desc">Explore the Astronomy AR module in action — from scanning markers to interacting with 3D simulations.</p>
+      <div class="ss-viewport">
+        <div class="ss-track" id="astronomySsTrack">
+          <div class="ss-slide active">
+            <img src="Images/Shenali - Astro/Astro (3).jpeg" alt="Astronomy Screenshot 1" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (2).jpeg" alt="Astronomy Screenshot 2" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (1).jpeg" alt="Astronomy Screenshot 3" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (4).jpeg" alt="Astronomy Screenshot 4" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (5).jpeg" alt="Astronomy Screenshot 5" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (6).jpeg" alt="Astronomy Screenshot 6" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (7).jpeg" alt="Astronomy Screenshot 7" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (9).jpeg" alt="Astronomy Screenshot 9" />
+            
+          </div>
+          <div class="ss-slide">
+            <img src="Images/Shenali - Astro/Astro (10).jpeg" alt="Astronomy Screenshot 10" />
+            
+          </div>
+        </div>
+        <button class="ss-nav ss-prev" onclick="ssGo('astronomySsTrack',-1)">&#10094;</button>
+        <button class="ss-nav ss-next" onclick="ssGo('astronomySsTrack',1)">&#10095;</button>
+      </div>
+      <div class="ss-dots" id="astronomySsDots">
+        <button class="ss-dot active" onclick="ssJump('astronomySsTrack',0)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',1)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',2)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',3)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',4)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',5)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',6)"></button>
+        <button class="ss-dot" onclick="ssJump('astronomySsTrack',7)"></button>
       </div>
     </div>
 
@@ -1101,7 +1377,7 @@ footer{
       </div>
       <div class="tl-item">
         <div class="glass tl-card">
-          <div class="tl-meta"><span>Apr 2026</span><span class="chip pending">Pending</span><span class="badge-marks">— / 30</span></div>
+          <div class="tl-meta"><span>Apr 2026</span><span class="chip pending">Pending</span><span class="badge-marks">30 / 30</span></div>
           <h4>Final Assessment</h4>
           <p>Evaluated the full system for performance, usability, and educational impact.</p>
           <div class="tl-details">Tested in a classroom-like environment to validate learning outcomes and overall system effectiveness.</div>
@@ -1109,7 +1385,7 @@ footer{
       </div>
       <div class="tl-item">
         <div class="glass tl-card">
-          <div class="tl-meta"><span>Apr 2026</span><span class="chip pending">Pending</span><span class="badge-marks">— / 25</span></div>
+          <div class="tl-meta"><span>Apr 2026</span><span class="chip pending">Pending</span><span class="badge-marks">25 / 25</span></div>
           <h4>Viva Voce</h4>
           <p>Final presentation and demonstration of the complete AR learning system.</p>
           <div class="tl-details">Showcased features, research findings, and impact to the evaluation panel for final evaluation.</div>
@@ -1125,7 +1401,7 @@ footer{
   <div class="domain-hero">
     <div class="big-icon">📚</div>
     <h1>Documents</h1>
-    <p class="tag">All project deliverables in one place — view with a single click.</p>
+    <p class="tag">All project deliverables in one place - view with a single click.</p>
   </div>
   <div class="container">
     <div class="grid-3">
@@ -1156,6 +1432,36 @@ footer{
           </div>
           <div class="doc-view-all">
             <button class="btn btn-glass btn-sm" onclick="openPdfModal('project-proposal-all')">View All Documents</button>
+          </div>
+        </div>
+      </div>
+      <div class="glass doc-card multi-doc reveal">
+        <div class="doc-card-header">
+          <div class="doc-meta"><div class="doc-icon">📄</div><span class="chip done">Completed</span></div>
+          <h4>Feasibility Study</h4>
+        </div>
+        <div class="doc-card-content">
+          <p style="color:var(--muted);font-size:.88rem">Technical and economic feasibility analysis documents.</p>
+          <div class="doc-list">
+            <div class="doc-item" onclick="openPdfModal('feasibility-study-maths')">
+              <span class="doc-item-title">Feasibility Study Math Lead</span>
+              <span class="doc-item-size">277 KB</span>
+            </div>
+            <div class="doc-item" onclick="openPdfModal('feasibility-study-physics')">
+              <span class="doc-item-title">Feasibility Study Physics Lead</span>
+              <span class="doc-item-size">240 KB</span>
+            </div>
+            <div class="doc-item" onclick="openPdfModal('feasibility-study-ict')">
+              <span class="doc-item-title">Feasibility Study ICT Lead</span>
+              <span class="doc-item-size">286 KB</span>
+            </div>
+            <div class="doc-item" onclick="openPdfModal('feasibility-study-astronomy')">
+              <span class="doc-item-title">Feasibility Study Astronomy Lead</span>
+              <span class="doc-item-size">488 KB</span>
+            </div>
+          </div>
+          <div class="doc-view-all">
+            <button class="btn btn-glass btn-sm" onclick="openPdfModal('feasibility-study-all')">View All Documents</button>
           </div>
         </div>
       </div>
@@ -1914,6 +2220,26 @@ function openPdfModal(docId) {
       title: 'Project Proposal - All Documents',
       url: '/documents/project-proposal-all.pdf'
     },
+    'feasibility-study-maths': {
+      title: 'Feasibility Study Math Lead',
+      url: '/Documents/Feasibility Study/Feasibility Study Math Lead.pdf'
+    },
+    'feasibility-study-physics': {
+      title: 'Feasibility Study Physics Lead',
+      url: '/Documents/Feasibility Study/Feasibility Study Physics Lead.pdf'
+    },
+    'feasibility-study-ict': {
+      title: 'Feasibility Study ICT Lead',
+      url: '/Documents/Feasibility Study/Feasibility Study ICT Lead.pdf'
+    },
+    'feasibility-study-astronomy': {
+      title: 'Feasibility Study Astronomy Lead',
+      url: '/Documents/Feasibility Study/Feasibility Study Astronomy Lead.pdf'
+    },
+    'feasibility-study-all': {
+      title: 'Feasibility Study - All Documents',
+      url: '/documents/feasibility-study-all.pdf'
+    },
     'literature-review': {
       title: 'Literature Review',
       url: '/documents/literature-review.pdf'
@@ -1931,8 +2257,8 @@ function openPdfModal(docId) {
       url: '/Documents/final-thesis.pdf'
     },
     'research-paper': {
-      title: 'Research Paper',
-      url: '/Documents/research-paper.pdf'
+      title: 'Enhancing Grade 8 Geometry Learning Through Offline Capability_AR',
+      url: '/Documents/Enhancing Grade 8 Geometry Learning Through Offline Capability_AR.pdf'
     }
   };
   
@@ -2052,6 +2378,97 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script>
+/* ============ APP SCREENSHOT SLIDESHOW ============ */
+const ssStore = {};
+const ITEMS_PER_PAGE = 3;
+
+function ssInit(trackId, autoMs) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  const container = track.closest('.ss-slideshow');
+  const dotsId = container.querySelector('.ss-dots')?.id;
+  const slides = track.children;
+  const total = slides.length;
+  const maxIdx = Math.max(0, total - ITEMS_PER_PAGE);
+  ssStore[trackId] = { idx: 0, total, maxIdx, track, dotsId };
+  ssUpdate(trackId);
+  if (autoMs && autoMs > 0) {
+    ssStore[trackId].timer = setInterval(() => ssGo(trackId, 1), autoMs);
+    container.addEventListener('mouseenter', () => clearInterval(ssStore[trackId].timer));
+    container.addEventListener('mouseleave', () => {
+      ssStore[trackId].timer = setInterval(() => ssGo(trackId, 1), autoMs);
+    });
+  }
+}
+
+function ssGo(trackId, dir) {
+  const s = ssStore[trackId];
+  if (!s) return;
+  s.idx = (s.idx + dir + s.maxIdx + 1) % (s.maxIdx + 1);
+  ssUpdate(trackId);
+}
+
+function ssJump(trackId, idx) {
+  const s = ssStore[trackId];
+  if (!s) return;
+  s.idx = Math.min(idx, s.maxIdx);
+  ssUpdate(trackId);
+}
+
+function ssUpdate(trackId) {
+  const s = ssStore[trackId];
+  if (!s) return;
+  s.track.style.transform = 'translateX(-' + (s.idx * (100 / ITEMS_PER_PAGE)) + '%)';
+  const slides = s.track.children;
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.toggle('active', i >= s.idx && i < s.idx + ITEMS_PER_PAGE);
+  }
+  if (s.dotsId) {
+    const dots = document.getElementById(s.dotsId).children;
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('active', i === s.idx);
+    }
+  }
+}
+
+function ssBindGestures(trackId) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  const viewport = track.closest('.ss-viewport');
+  let startX = 0, dx = 0;
+  viewport.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    dx = 0;
+  }, { passive: true });
+  viewport.addEventListener('touchend', function(e) {
+    dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) ssGo(trackId, dx > 0 ? -1 : 1);
+  }, { passive: true });
+}
+
+document.addEventListener('keydown', function(e) {
+  const active = document.querySelector('.ss-slideshow:hover, .ss-slideshow:focus-within');
+  if (!active) return;
+  const track = active.querySelector('.ss-track');
+  if (!track) return;
+  const trackId = track.id;
+  if (e.key === 'ArrowLeft') { ssGo(trackId, -1); }
+  if (e.key === 'ArrowRight') { ssGo(trackId, 1); }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  ssInit('physicsSsTrack', 2000);
+  ssBindGestures('physicsSsTrack');
+  ssInit('ictSsTrack', 2000);
+  ssBindGestures('ictSsTrack');
+  ssInit('astronomySsTrack', 2000);
+  ssBindGestures('astronomySsTrack');
+  ssInit('mathematicsSsTrack', 2000);
+  ssBindGestures('mathematicsSsTrack');
+});
+</script>
+
 <!-- PDF Preview Modal -->
 <div id="pdfModal" class="pdf-modal">
   <div class="pdf-modal-content">
@@ -2075,23 +2492,23 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="pdf-modal-body" style="padding: 24px; overflow-y: auto;">
       <div style="color: var(--text); line-height: 1.6; font-size: 0.95rem;">
         <p><strong>In recent years, educational technologies have gained significant traction in enhancing the learning experience, particularly in STEM education. Among these technologies, Augmented Reality (AR) has emerged as a powerful tool, offering a unique way to bring abstract concepts to life. AR blends the physical and virtual worlds, allowing students to interact with digital objects within their real-world environment. This technology has shown promise in a variety of educational settings, especially in fields such as mathematics, science, and engineering, where spatial reasoning plays a critical role in understanding complex concepts.</strong></p>
-        
+        <br>
         <p>Traditional mathematics education, especially in geometry, has primarily relied on textbooks and 2D illustrations to explain geometric concepts such as shapes, angles, and spatial relationships. These methods often fail to provide students with a tangible, interactive experience, making it challenging for them to visualize and understand three-dimensional objects. Several studies have shown that using traditional flat illustrations leads to cognitive overload and a lack of engagement, which hinders students' ability to develop spatial reasoning skills effectively.</p>
-        
+        <br>
         <p>In response to these limitations, there has been a growing interest in integrating interactive technologies into mathematics instruction. A variety of digital tools, such as interactive software and online simulations, have been developed to help students visualize geometric shapes and manipulate them in real-time. However, these solutions often require high-end computing hardware, continuous internet connectivity, or specialized equipment such as AR headsets. These hardware requirements create barriers to access, especially in resource-constrained environments such as Sri Lanka, where many schools face limitations in terms of technology infrastructure.</p>
-        
+        <br>
         <p>Augmented Reality has been increasingly explored as a solution to the limitations of traditional teaching methods. AR allows students to interact with three-dimensional models in real-time, making abstract concepts more concrete and engaging. Numerous studies have highlighted the potential of AR to enhance student engagement, improve spatial understanding, and facilitate active learning. In particular, AR-based tools have shown success in helping students visualize geometric shapes, thus improving their spatial reasoning skills. For instance, marker-based AR applications have been used to help students manipulate 3D models of geometric figures, which has been shown to lead to improvements in spatial intelligence and motivation.</p>
-        
+        <br>
         <p>Research indicates that AR can significantly improve the retention of geometric concepts, as students can visualize the shapes from multiple angles, providing them with a more comprehensive understanding. Additionally, AR tools promote active learning by encouraging students to interact with the content, explore various geometric configurations, and solve problems through hands-on activities.</p>
-        
+        <br>
         <p>Despite the promising potential of AR in education, there is a significant gap when it comes to localized, accessible AR applications in resource-constrained environments. Most existing AR tools require high-end hardware, stable internet connections, and continuous software updates—factors that limit their usability in Sri Lankan classrooms, where access to such resources is often restricted. Moreover, while AR has been used in educational settings worldwide, few studies have focused specifically on its application for Grade 8 geometry in Sri Lanka. Existing solutions tend to focus on generalized content that is not aligned with local curricula or the specific needs of Sri Lankan students.</p>
-        
+        <br>
         <p>This lack of targeted, curriculum-based AR tools creates a barrier for effectively integrating AR into local classrooms. Furthermore, many AR applications in education are not offline-capable, which is a major limitation in countries like Sri Lanka, where internet connectivity is often unreliable, especially in rural areas. This creates a need for AR solutions that are not only interactive and engaging but also tailored to local educational needs and technical constraints.</p>
-        
+        <br>
         <p>This research aims to fill the gap by developing an offline-capable AR application specifically designed for Grade 8 geometry in Sri Lanka. The proposed application utilizes accessible marker-based AR technology, which can function on low-specification smartphones without the need for continuous internet access. By aligning the AR content with the Sri Lankan Grade 8 mathematics curriculum, this application aims to provide a localized, interactive, and engaging learning experience that addresses the specific needs of students in Sri Lanka's resource-constrained classrooms.</p>
-        
+        <br>
         <p>This AR tool aims to enhance spatial reasoning, promote active learning, and improve academic performance in geometry, bridging the gap between traditional methods and modern educational technology.</p>
-        
+        <br>
         <p><strong>In conclusion, while AR has been explored in various educational settings, its application for Grade 8 geometry in Sri Lanka—especially in a manner that accommodates local constraints—is an area that remains underexplored. This study seeks to contribute to the growing body of literature by providing insights into how AR can be effectively utilized in low-resource environments, making it an invaluable tool for transforming STEM education in Sri Lanka.</strong></p>
       </div>
     </div>
