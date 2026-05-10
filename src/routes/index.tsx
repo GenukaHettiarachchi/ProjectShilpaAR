@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     // Redirect to the standalone single-file HTML site
-    window.location.replace("/stem-ar.html" + window.location.hash);
+    window.location.replace("/ProjectShilpaAR/stem-ar.html" + window.location.hash);
   }, []);
 
   return (
