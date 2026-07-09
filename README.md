@@ -1,7 +1,7 @@
 # ProjectShilpaAR
 
 ## Live Site
-Visit your deployed site at: https://genukahettiarachchi.github.io/ProjectShilpaAR/
+Visit your deployed site at: https://www.shilpa.studio/
 
 ## Development
 ```bash
